@@ -17,17 +17,20 @@ jobs:
           java-version: '22'
           cache: 'maven'
 
-      - name: 3. Install Gradle
+
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
-#      - name: 4. Generate Gradle Wrapper
-#        run: gradle wrapper
+      - name: Generate Gradle Wrapper
+        working-directory: gradlerepo
+        run: gradle wrapper
 
 
-      - name: 5. Grant execute permission
+      - name: 4. Grant execute permission
+        working-directory: gradlerepo
         run: chmod +x gradlew
 
 
-      - name: 6. Run Tests
+      - name: 5. Run Tests
+        working-directory: gradlerepo
         run: ./gradlew test --tests "com.gradleproject.data.OrderTestIT"
-

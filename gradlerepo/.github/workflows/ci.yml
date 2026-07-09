@@ -20,8 +20,8 @@ jobs:
       - name: 3. Install Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: 4. Generate Gradle Wrapper
-        run: gradle wrapper
+#      - name: 4. Generate Gradle Wrapper
+#        run: gradle wrapper
 
 
       - name: 5. Grant execute permission

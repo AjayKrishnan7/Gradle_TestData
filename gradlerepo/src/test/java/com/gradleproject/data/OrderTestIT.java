@@ -121,10 +121,21 @@ import java.sql.Statement;
     void resetMakesTestOrderIndependent(){
          assertEquals(0,repository.count());
          factory.persisted(OrderBuilder.anOrder().refunded());
-         
+
          assertEquals(1,repository.count());
          assertEquals(1,repository.countByStatus("REFUNDED"));
     }
+
+    @Test
+    void resetMakesTestOrderFailed(){
+        assertEquals(0,repository.count());
+        factory.persisted(OrderBuilder.anOrder().refunded());
+
+        assertEquals(1,repository.count());
+        assertEquals(1,repository.countByStatus("AVAILABLE"));
+    }
+
+
       
 }
  

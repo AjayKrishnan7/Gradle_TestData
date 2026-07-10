@@ -1,6 +1,7 @@
 package com.gradleproject.data;
 
 import io.qameta.allure.*;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
@@ -31,6 +32,23 @@ class AllureReport {
         assertTrue(productDefectIndex > flakyIndex);
         assertTrue(categories.contains("\"flaky\": true"));
         assertTrue(categories.contains("timeout|stale element|connection reset"));
+    }
+
+    @Test
+    @Story("Categories")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test will brok")
+    void brokenTest(){
+        String Test = null;
+        Test.length();
+    }
+
+    @Test
+    @Story("Categories")
+    @Severity(SeverityLevel.CRITICAL)
+    @Disabled
+    @Description("Test will brok")
+    void skipped(){
     }
 }
 

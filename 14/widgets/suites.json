@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"abbec9b87061e859b42e29547bc87bba","name":"com.gradleproject.data.OrderTestIT","statistic":{"failed":2,"broken":0,"skipped":0,"passed":5,"unknown":0,"total":7}},{"uid":"3bc6ffc63645ca1ea2c53c3d0787e351","name":"com.gradleproject.data.AllureReport","statistic":{"failed":0,"broken":1,"skipped":1,"passed":1,"unknown":0,"total":3}}]}

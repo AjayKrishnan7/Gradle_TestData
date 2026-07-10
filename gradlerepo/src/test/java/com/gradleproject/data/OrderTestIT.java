@@ -132,7 +132,7 @@ import java.sql.Statement;
         factory.persisted(OrderBuilder.anOrder().refunded());
 
         assertEquals(1,repository.count());
-        assertEquals(1,repository.countByStatus("AVAILABLE"));
+        assertEquals(1,repository.countByStatus("REFUNDED"));
     }
 
 

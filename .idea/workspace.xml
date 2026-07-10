@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cdcd931-5713-4134-a98b-c2c0669a2348" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gradlerepo/src/test/resources/allure/categories.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlerepo/.github/modernize/java-upgrade/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlerepo/.github/modernize/java-upgrade/hooks/scripts/recordToolUse.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlerepo/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlerepo/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/gradlerepo/build.gradle.kts" afterDir="false" />
-    </list>
+    <list default="true" id="5cdcd931-5713-4134-a98b-c2c0669a2348" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +101,7 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.gradle [clean test]">
     <configuration name="gradle [clean test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

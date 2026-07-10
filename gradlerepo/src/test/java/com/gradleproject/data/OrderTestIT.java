@@ -9,13 +9,12 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.mysql.MySQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @Testcontainers(disabledWithoutDocker = true)
@@ -126,16 +125,36 @@ import java.sql.Statement;
          assertEquals(1,repository.countByStatus("REFUNDED"));
     }
 
+
+    // FAILED TESTS//
+
+
     @Test
     void resetMakesTestOrderFailed(){
         assertEquals(0,repository.count());
         factory.persisted(OrderBuilder.anOrder().refunded());
 
         assertEquals(1,repository.count());
-        assertEquals(1,repository.countByStatus("REFUNDED"));
+        assertEquals(1,repository.countByStatus("FAILED"));
     }
 
 
+    @Test
+    void persistedBuilderDataAgainstIsolatedMysqlFailed(){
+        long id = factory.persisted(OrderBuilder.anOrder().qty(3));
+
+        assertFalse(id>0);
+        assertEquals(1,repository.count());
+    }
+
+
+    @Test
+    void countsOnlyPersistedTestOrdersFailed(){
+        factory.persisted(OrderBuilder.anOrder());
+        factory.persisted(OrderBuilder.anOrder().sku("SKU-10"));
+
+        assertEquals(2,repository.count());
+    }
       
 }
  

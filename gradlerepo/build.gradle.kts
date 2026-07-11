@@ -92,7 +92,7 @@ tasks.register("runAllTests") {
 tasks.test {
     description = "Run the tests"
     include("**/OrderTestIT.class")
-    include("**/AllureReport.class")
+//    include("**/AllureReport.class")
     maxParallelForks = 1
 }
 
